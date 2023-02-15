@@ -1,0 +1,1016 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CV Template [Your Name]</title>
+	<style>
+		/* cspell:disable-file */
+		/* webkit printing magic: print all background colors */
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		@media only screen {
+			body {
+				margin: 2em auto;
+				max-width: 900px;
+				color: rgb(55, 53, 47);
+			}
+		}
+
+		body {
+			line-height: 1.5;
+			white-space: pre-wrap;
+		}
+
+		a,
+		a.visited {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 80%;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		.page-title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 1.875rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+		.source {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 1.5em;
+			word-break: break-all;
+		}
+
+		.callout {
+			border-radius: 3px;
+			padding: 1rem;
+		}
+
+		figure {
+			margin: 1.25em 0;
+			page-break-inside: avoid;
+		}
+
+		figcaption {
+			opacity: 0.5;
+			font-size: 85%;
+			margin-top: 0.5em;
+		}
+
+		mark {
+			background-color: transparent;
+		}
+
+		.indented {
+			padding-left: 1.5em;
+		}
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.column-list {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.column {
+			padding: 0 1em;
+		}
+
+		.column:first-child {
+			padding-left: 0;
+		}
+
+		.column:last-child {
+			padding-right: 0;
+		}
+
+		.table_of_contents-item {
+			display: block;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			padding: 0.125rem;
+		}
+
+		.table_of_contents-indent-1 {
+			margin-left: 1.5rem;
+		}
+
+		.table_of_contents-indent-2 {
+			margin-left: 3rem;
+		}
+
+		.table_of_contents-indent-3 {
+			margin-left: 4.5rem;
+		}
+
+		.table_of_contents-link {
+			text-decoration: none;
+			opacity: 0.7;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+			border-collapse: collapse;
+		}
+
+		table {
+			border-left: none;
+			border-right: none;
+		}
+
+		th,
+		td {
+			font-weight: normal;
+			padding: 0.25em 0.5em;
+			line-height: 1.5;
+			min-height: 1.5em;
+			text-align: left;
+		}
+
+		th {
+			color: rgba(55, 53, 47, 0.6);
+		}
+
+		ol,
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+		}
+
+		ul.to-do-list {
+			text-indent: -1.7em;
+		}
+
+		ul.to-do-list>li {
+			list-style: none;
+		}
+
+		.to-do-children-checked {
+			text-decoration: line-through;
+			opacity: 0.375;
+		}
+
+		ul.toggle>li {
+			list-style: none;
+		}
+
+		ul {
+			padding-inline-start: 1.7em;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		ol {
+			padding-inline-start: 1.6em;
+		}
+
+		ol>li {
+			padding-left: 0.2em;
+		}
+
+		.mono ol {
+			padding-inline-start: 2em;
+		}
+
+		.mono ol>li {
+			text-indent: -0.4em;
+		}
+
+		.toggle {
+			padding-inline-start: 0em;
+			list-style-type: none;
+		}
+
+		/* Indent toggle children */
+		.toggle>li>details {
+			padding-left: 1.7em;
+		}
+
+		.toggle>li>details>summary {
+			margin-left: -1.1em;
+		}
+
+		.selected-value {
+			display: inline-block;
+			padding: 0 0.5em;
+			background: rgba(206, 205, 202, 0.5);
+			border-radius: 3px;
+			margin-right: 0.5em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+			white-space: nowrap;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.simple-table {
+			margin-top: 1em;
+			font-size: 0.875rem;
+			empty-cells: show;
+		}
+
+		.simple-table td {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table th {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table-header-color {
+			background: rgb(247, 246, 243);
+			color: black;
+		}
+
+		.simple-table-header {
+			font-weight: 500;
+		}
+
+		time {
+			opacity: 0.5;
+		}
+
+		.icon {
+			display: inline-block;
+			max-width: 1.2em;
+			max-height: 1.2em;
+			text-decoration: none;
+			vertical-align: text-bottom;
+			margin-right: 0.5em;
+		}
+
+		img.icon {
+			border-radius: 3px;
+		}
+
+		.user-icon {
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+		}
+
+		.user-icon-inner {
+			font-size: 0.8em;
+		}
+
+		.text-icon {
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		.page-cover-image {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			max-height: 30vh;
+		}
+
+		.page-header-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.page-header-icon-with-cover {
+			margin-top: -0.72em;
+			margin-left: 0.07em;
+		}
+
+		.page-header-icon img {
+			border-radius: 3px;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+
+		p>.user {
+			opacity: 0.5;
+		}
+
+		td>.user,
+		td>time {
+			white-space: nowrap;
+		}
+
+		input[type="checkbox"] {
+			transform: scale(1.5);
+			margin-right: 0.6em;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.image {
+			border: none;
+			margin: 1.5em 0;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+		}
+
+		.code,
+		code {
+			background: rgba(135, 131, 120, 0.15);
+			border-radius: 3px;
+			padding: 0.2em 0.4em;
+			border-radius: 3px;
+			font-size: 85%;
+			tab-size: 2;
+		}
+
+		code {
+			color: #eb5757;
+		}
+
+		.code {
+			padding: 1.5em 1em;
+		}
+
+		.code-wrap {
+			white-space: pre-wrap;
+			word-break: break-all;
+		}
+
+		.code>code {
+			background: none;
+			padding: 0;
+			font-size: 100%;
+			color: inherit;
+		}
+
+		blockquote {
+			font-size: 1.25em;
+			margin: 1em 0;
+			padding-left: 1em;
+			border-left: 3px solid rgb(55, 53, 47);
+		}
+
+		.bookmark {
+			text-decoration: none;
+			max-height: 8em;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+
+		.bookmark-title {
+			font-size: 0.85em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.75em;
+			white-space: nowrap;
+		}
+
+		.bookmark-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bookmark-info {
+			flex: 4 1 180px;
+			padding: 12px 14px 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.bookmark-image {
+			width: 33%;
+			flex: 1 1 180px;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			border-radius: 1px;
+		}
+
+		.bookmark-description {
+			color: rgba(55, 53, 47, 0.6);
+			font-size: 0.75em;
+			overflow: hidden;
+			max-height: 4.5em;
+			word-break: break-word;
+		}
+
+		.bookmark-href {
+			font-size: 0.75em;
+			margin-top: 0.25em;
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.code {
+			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+		}
+
+		.serif {
+			font-family: Lyon-Text, Georgia, ui-serif, serif;
+		}
+
+		.mono {
+			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+		}
+
+		.pdf .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+		}
+
+		.pdf .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.pdf .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+		}
+
+		.pdf .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.highlight-default {
+			color: rgba(55, 53, 47, 1);
+		}
+
+		.highlight-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.highlight-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.highlight-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.highlight-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.highlight-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.highlight-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.highlight-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.highlight-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.highlight-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.highlight-gray_background {
+			background: rgba(241, 241, 239, 1);
+		}
+
+		.highlight-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.highlight-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.highlight-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.highlight-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.highlight-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.highlight-purple_background {
+			background: rgba(244, 240, 247, 0.8);
+		}
+
+		.highlight-pink_background {
+			background: rgba(249, 238, 243, 0.8);
+		}
+
+		.highlight-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.block-color-default {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.block-color-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.block-color-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.block-color-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.block-color-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.block-color-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.block-color-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.block-color-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.block-color-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.block-color-gray_background {
+			background: rgba(241, 241, 239, 1);
+		}
+
+		.block-color-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.block-color-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.block-color-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.block-color-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.block-color-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.block-color-purple_background {
+			background: rgba(244, 240, 247, 0.8);
+		}
+
+		.block-color-pink_background {
+			background: rgba(249, 238, 243, 0.8);
+		}
+
+		.block-color-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.select-value-color-pink {
+			background-color: rgba(245, 224, 233, 1);
+		}
+
+		.select-value-color-purple {
+			background-color: rgba(232, 222, 238, 1);
+		}
+
+		.select-value-color-green {
+			background-color: rgba(219, 237, 219, 1);
+		}
+
+		.select-value-color-gray {
+			background-color: rgba(227, 226, 224, 1);
+		}
+
+		.select-value-color-opaquegray {
+			background-color: rgba(255, 255, 255, 0.0375);
+		}
+
+		.select-value-color-orange {
+			background-color: rgba(250, 222, 201, 1);
+		}
+
+		.select-value-color-brown {
+			background-color: rgba(238, 224, 218, 1);
+		}
+
+		.select-value-color-red {
+			background-color: rgba(255, 226, 221, 1);
+		}
+
+		.select-value-color-yellow {
+			background-color: rgba(253, 236, 200, 1);
+		}
+
+		.select-value-color-blue {
+			background-color: rgba(211, 229, 239, 1);
+		}
+
+		.checkbox {
+			display: inline-flex;
+			vertical-align: text-bottom;
+			width: 16;
+			height: 16;
+			background-size: 16px;
+			margin-left: 2px;
+			margin-right: 5px;
+		}
+
+		.checkbox-on {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.checkbox-off {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+	</style>
+</head>
+
+<body>
+	<article id="210cbf06-a798-457d-a95c-f8f32381d92a" class="page sans">
+		<header>
+			<div class="page-header-icon undefined"><span class="icon">👨</span></div>
+			<h1 class="page-title">CV Template [Your Name]</h1>
+		</header>
+		<div class="page-body">
+			<blockquote id="e5d739d7-cc8d-42c5-a70a-e37e42bf8eb9" class=""><strong>🇻🇳 Mẫu CV xin việc tạo bởi
+				</strong><strong><a href="https://www.youtube.com/channel/UCRDt3ECLjvUWTAzYjGBwTxA">Trần Minh
+						Phúc</a></strong><strong>
+
+				</strong>Theo dõi để xem nhiều nội dung bổ ích hơn mỗi ngày/tuần 💚</blockquote>
+			<div id="c7e223d7-c293-4bc7-aed4-55571b913246" class="column-list">
+				<div id="8f57f9ba-200d-471c-8f80-a59650d3bd85" style="width:50%" class="column">
+					<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+						id="600c6203-66e6-4df2-a21b-daeee594cb81">
+						<div style="font-size:1.5em"><img class="icon"
+								src="CV%20Template%20%5BYour%20Name%5D%20210cbf06a798457da95cf8f32381d92a/youtube.png" />
+						</div>
+						<div style="width:100%"><a
+								href="https://www.youtube.com/channel/UCRDt3ECLjvUWTAzYjGBwTxA">YouTube</a></div>
+					</figure>
+					<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+						id="8021e187-8573-4bfa-b697-88d92427764c">
+						<div style="font-size:1.5em"><img class="icon"
+								src="CV%20Template%20%5BYour%20Name%5D%20210cbf06a798457da95cf8f32381d92a/facebook.png" />
+						</div>
+						<div style="width:100%"><a href="https://www.facebook.com/phuctm97/">Facebook</a></div>
+					</figure>
+				</div>
+				<div id="1e7becbd-558a-47a9-9cca-7820a47243b5" style="width:50%" class="column">
+					<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+						id="07507a38-fe02-47de-9295-609a0c83fb76">
+						<div style="font-size:1.5em"><img class="icon"
+								src="CV%20Template%20%5BYour%20Name%5D%20210cbf06a798457da95cf8f32381d92a/instagram.png" />
+						</div>
+						<div style="width:100%"><a href="https://www.instagram.com/phuctm97/">Instagram</a></div>
+					</figure>
+					<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+						id="4f0a86a8-1275-4eb1-a4b7-bcf0da498691">
+						<div style="font-size:1.5em"><img class="icon"
+								src="CV%20Template%20%5BYour%20Name%5D%20210cbf06a798457da95cf8f32381d92a/twitter.png" />
+						</div>
+						<div style="width:100%"><a href="https://twitter.com/phuctm97">Twitter</a></div>
+					</figure>
+				</div>
+			</div>
+			<p id="3e675bd9-0ce0-4db2-bbde-6ba4244cdc19" class="">
+			</p>
+			<hr id="6f92826d-4e3b-4ca1-8ecc-b0be2817ef5b" />
+			<p id="57474b82-ba33-4b63-b22a-f9fe32c8dbfd" class="">🔗 CV của mình để bạn tham khảo <a
+					href="https://resume.phuctm97.com/">resume.phuctm97.com</a> (cập nhật lần cuối tháng 10/2020)</p>
+			<hr id="6f34b0e1-bade-4988-9824-94dcae214a2b" />
+			<p id="4b11c193-6c53-452f-837f-57322600ec26" class="">
+			</p>
+			<p id="7ab8212f-b2c8-4e54-830a-ac20d1276088" class="">
+			</p>
+			<p id="76bd5523-ffac-416f-8536-74d23cdf7c70" class="">— Start —</p>
+			<p id="95bf63c9-6f6d-4a5a-bc35-b22dd2236f93" class="">
+			</p>
+			<h1 id="ed8c9cb2-3739-4b05-861f-ba053b6f6a46" class="">🙋🏻‍♂️ Brief introduction</h1>
+			<blockquote id="d116e32a-3375-46d2-80a2-aa07f2735d11" class="">Hi! I&#x27;m a [your job] [your professional
+				personality].</blockquote>
+			<p id="48423f30-8a41-40af-935d-401f7eda505d" class="">[What you did?]</p>
+			<p id="d48bb7e5-e119-4476-a803-45aab6fb1363" class="">Thanks to that, [you had experience and skills in]</p>
+			<p id="40057079-369b-41ea-88a4-f62de68d37ee" class="">Previously, [most impressive thing you&#x27;ve
+				achieved]</p>
+			<hr id="1bfdbd3c-5d0d-486d-9dd4-c0811db3de37" />
+			<h1 id="2616f6d0-07b0-4f08-aa2f-6df10ce15e7f" class="">👔 Work experience</h1>
+			<h2 id="1c52b32b-b672-4508-bdc8-16740f04e2a9" class="">[Position]</h2>
+			<p id="1516f5ed-785d-4971-a9ae-db9e9a39e60b" class="block-color-gray"><a
+					href="https://www.youtube.com/channel/UCRDt3ECLjvUWTAzYjGBwTxA"><em><strong>[Company]</strong></em></a><em>,
+					Singapore, Jul - Oct 2020</em></p>
+			<p id="ba274973-f3c4-49e4-a7d7-346ae4c9f442" class="">[What you did?]</p>
+			<p id="5255af38-c90e-47dd-b0da-f55c73a97d72" class="">[What impact you&#x27;ve achieved with numbers?]</p>
+			<p id="598b2175-4710-4e2e-a6f7-e8ac407220b0" class="">[Specific skills you&#x27;ve worked with]</p>
+			<h2 id="b8838150-56af-4a6b-9bfc-147846dbeb06" class="">[Position]</h2>
+			<p id="c8463389-682e-4ca7-a05c-5555c0b49e2e" class="block-color-gray"><a
+					href="https://www.youtube.com/channel/UCRDt3ECLjvUWTAzYjGBwTxA"><em><strong>[Company]</strong></em></a><em>,
+					Vietnam, Jan - Jul 2020</em></p>
+			<p id="292f1ddc-613d-40f7-878d-c62f61b04a2d" class="">[What you did?]</p>
+			<p id="35cc3f6a-907e-4ffc-9823-86391efb5088" class="">[What impact you&#x27;ve achieved with numbers?]</p>
+			<p id="287bef35-bcb7-48f0-b82a-2673d418503b" class="">[Specific skills you&#x27;ve worked with]</p>
+			<hr id="94824e39-4188-4d49-93c2-16867e96b7c0" />
+			<h1 id="945c711e-a428-44a2-89e5-41d8ae6957d5" class="">👨🏻‍💻<strong> </strong>Side projects</h1>
+			<h2 id="e37d6ba1-1a1d-4fa3-8680-5cd8bd68f473" class="">[Project Name]</h2>
+			<p id="69074f49-f010-43c5-a01b-b34ee653fd40" class="">[What and why you created this project?]</p>
+			<p id="f0087c26-eb53-4858-835e-81d1a9587a88" class="">[How did you do it?] [Specific skills you&#x27;ve
+				worked with]</p>
+			<p id="96bd29a3-0156-4092-af86-f9fa44bc3a6a" class="">🔗 Link: [Links to most impressive analytics, the
+				project, or any proof that it exists]</p>
+			<h2 id="f1751f34-84f6-400d-92e3-bab3d701bd61" class="">[Project Name]</h2>
+			<p id="69fb1530-e236-4006-9458-2e7ca4793ee6" class="">[What and why you created this project?]</p>
+			<p id="549fbcc6-2d0b-4a96-8669-5308b30e7bdc" class="">[How did you do it?] [Specific skills you&#x27;ve
+				worked with]</p>
+			<p id="29717ff4-5e5e-4b69-8880-bb5e2f4871d9" class="">🔗 Link: [Links to most impressive analytics, the
+				project, or any proof that it exists]</p>
+			<hr id="986eb6b4-e131-49aa-b9c1-365b621578c0" />
+			<h1 id="27dda062-d3f0-4b61-8157-61864aefdbec" class="">🏅 Honors &amp; Awards</h1>
+			<ul id="568c9278-ca77-47fc-a343-324f2f419c30" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>[Competition name]
+					</strong>[What it is about?]</li>
+			</ul>
+			<ul id="cb981a5d-096d-4032-b4a8-232ae95cc995" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>[Competition name]
+					</strong>[What it is about?]</li>
+			</ul>
+			<hr id="63043dd3-0d07-4083-8d03-88eb5a154d55" />
+			<h1 id="b308fa7d-6002-422e-8368-0c4a210c6e2c" class="">✍🏻 Popular Articles</h1>
+			<ul id="aee90c74-6b55-4beb-a081-ae8a3ccbaaa8" class="bulleted-list">
+				<li style="list-style-type:disc">[Most popular articles/blog showing what you&#x27;ve experienced with]
+				</li>
+			</ul>
+			<hr id="52144915-2788-49ef-a24b-64ac59493d96" />
+			<h1 id="29d96b09-a486-4278-b717-b892b488ddc6" class="">🧤 Other Activities</h1>
+			<p id="d9825f95-3dd1-445d-b515-2a70c8ff7d78" class="">[Any activity that you&#x27;ve done that may show your
+				enthusiasm in learning and working]</p>
+			<ul id="dce22079-681b-4cc9-b181-f88b6597b9a7" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>[Role] at [Organization] ([time])
+					</strong>[What you did or impact you&#x27;ve created?]</li>
+			</ul>
+			<ul id="d4d066fd-a963-4c93-b5f1-d0a44778ef8f" class="bulleted-list">
+				<li style="list-style-type:disc"><strong>[Role] at [Organization] ([time])
+					</strong>[What you did or impact you&#x27;ve created?]</li>
+			</ul>
+			<hr id="848a8c2d-c3de-4c3c-a75e-9abc971f934b" />
+			<h1 id="b2089a79-194f-4bae-bf17-d4f39d5bc724" class="">🛠 Skills</h1>
+			<p id="8a9de2a2-1a2d-4bfa-9b59-d368ff6aebf2" class="">[Summarized list of all skills you&#x27;ve worked with
+				in your previous job/side projects, group by working area of work]</p>
+			<h2 id="2f2b54ec-bc15-4625-b7a7-03e114e15941" class="">[Area of work]</h2>
+			<p id="a9e88642-01ff-4232-a744-90300f1b7bfb" class="">[Specific tools/technologies/work you&#x27;ve done]
+			</p>
+			<h2 id="9c61008e-2541-43ac-a69d-6f53e3937dab" class="">[Area of work]</h2>
+			<p id="53e754bf-7a21-4fa8-8821-c9abb8ae4bea" class="">[Specific tools/technologies/work you&#x27;ve done]
+			</p>
+			<hr id="3116a6e3-a4c8-4c71-ba14-41bf1da6bac3" />
+			<h1 id="4aefb1de-5f55-482b-8c1b-c9813e860001" class="">📚 Education</h1>
+			<h2 id="10c62b02-4349-483c-9831-74e486612b77" class="">[Major/Certificate]</h2>
+			<p id="66f96e1e-173c-4998-815c-32f54607d6e4" class="block-color-gray">
+				<em><strong>[School/Course/Organization name]</strong></em>, <em>2015 - 2020</em></p>
+			<p id="d2b19016-b47a-4c85-a96d-a111bdc00600" class="">[GPA (if 3+ out of 4) or Most impressive thing
+				you&#x27;ve done]</p>
+			<hr id="740e125c-f174-472a-a9cd-2e8eadeed7ba" />
+			<h1 id="159efcc5-99cc-4983-b917-50ce15eae415" class="">🗣 Languages</h1>
+			<h3 id="90c78c59-5c6b-4e2b-9ec0-550f2ac7ca21" class="">English 🇺🇸</h3>
+			<p id="919afffe-cf42-497a-839b-53950e87330a" class="">[Your English efficiency]</p>
+			<h3 id="81f064e4-c9fe-4233-a143-c22508f006ac" class="">Vietnamese 🇻🇳</h3>
+			<p id="af056875-478e-4a7e-88b2-08392e801534" class="">[Your other language efficiency]</p>
+			<hr id="68cc4450-5c90-4a0b-a66b-8a850c7ed941" />
+			<h1 id="0ab511f6-cf04-4ace-983e-3a4c62c72110" class="">☎️ Contact information</h1>
+			<p id="6c5eb85c-1f1b-4c9e-9630-4a81a3d6b5e6" class="">📧 Email:</p>
+			<p id="1bf2fa48-bc49-40e8-bf4b-a77f320c4648" class="">✍🏻 Blog:</p>
+			<p id="6d7fd031-3be2-4e66-85d6-080e33c2049f" class="">🔗 LinkedIn:</p>
+			<p id="f2b67812-98a0-46b9-b2a9-f0748d271b67" class="">🔗 Github:</p>
+			<p id="cc01ab16-d113-4782-a298-d710a4739f59" class="">[Anything that shows your work]</p>
+			<hr id="5440d338-5543-4fdc-832c-f0362a16c2a3" />
+			<h1 id="31f25c0d-934a-425e-9c08-e6bae556167a" class="">🙏🏻 Thanks!</h1>
+			<blockquote id="289b3261-a1d2-490c-b031-6b668b9a1f3a" class="">Looking forward to hearing from you.
+				- [Your name]</blockquote>
+			<p id="6d8e37a7-6446-48a1-bfdd-2e9d6998f13b" class="">
+			</p>
+			<p id="c1a7da31-7fee-4e00-9200-48d629d6f80b" class="">
+			</p>
+			<p id="759ec372-a41f-4fe0-b589-5175a9ddec91" class="">— End —</p>
+			<p id="ab10a8ce-0f37-4bee-8e95-9634a44ff6d6" class="">
+			</p>
+			<p id="73f6c2e9-98f8-4531-bb1c-139a0b28af06" class="">
+			</p>
+			<blockquote id="0e8ce9cb-4d70-4124-bfa8-717a293a53e8" class=""><strong>Theo dõi mình để xem nhiều nội dung
+					bổ ích hơn mỗi ngày/tuần nha 💚</strong></blockquote>
+			<div id="54414e60-12bb-42e8-a2bc-685eaae18df3" class="column-list">
+				<div id="31e75b90-62e6-4d11-bb46-1445be85f374" style="width:50%" class="column">
+					<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+						id="1727cc9e-2c6b-4bc8-b0fa-9b13488bb509">
+						<div style="font-size:1.5em"><img class="icon"
+								src="CV%20Template%20%5BYour%20Name%5D%20210cbf06a798457da95cf8f32381d92a/youtube.png" />
+						</div>
+						<div style="width:100%"><a
+								href="https://www.youtube.com/channel/UCRDt3ECLjvUWTAzYjGBwTxA">YouTube</a></div>
+					</figure>
+					<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+						id="7b7d4571-4603-48f9-a11b-8ab968903295">
+						<div style="font-size:1.5em"><img class="icon"
+								src="CV%20Template%20%5BYour%20Name%5D%20210cbf06a798457da95cf8f32381d92a/facebook.png" />
+						</div>
+						<div style="width:100%"><a href="https://www.facebook.com/phuctm97/">Facebook</a></div>
+					</figure>
+				</div>
+				<div id="f66e1352-d3be-43ea-9e90-a0977ee0cd08" style="width:50%" class="column">
+					<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+						id="2233460c-ec81-4781-a5ae-ed95715f4004">
+						<div style="font-size:1.5em"><img class="icon"
+								src="CV%20Template%20%5BYour%20Name%5D%20210cbf06a798457da95cf8f32381d92a/instagram.png" />
+						</div>
+						<div style="width:100%"><a href="https://www.instagram.com/phuctm97/">Instagram</a></div>
+					</figure>
+					<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex"
+						id="de1c6e05-7dc7-4054-b546-476ef84a03a2">
+						<div style="font-size:1.5em"><img class="icon"
+								src="CV%20Template%20%5BYour%20Name%5D%20210cbf06a798457da95cf8f32381d92a/twitter.png" />
+						</div>
+						<div style="width:100%"><a href="https://twitter.com/phuctm97">Twitter</a></div>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</article>
+</body>
+
+</html>
